@@ -1,25 +1,22 @@
 @use "styles/breakpoints";
 
 .title {
-  //margin: auto;
-  max-width: 90rem;
+  width: fit-content;
   font-family: var(--font-title);
+  font-size: 3.5rem;
   color: var(--text);
-  font-size: 4rem;
 
   @include breakpoints.width(md) {
     font-size: 2rem;
   }
 
-    &::after {
-    content: "";
+  h1 {
+    margin: 0;
+  }
+
+  .line {
     width: 8rem;
     height: 3px;
     background-color: var(--text);
-    display: block;
-  }
-
-  h1 {
-    margin: 0;
   }
 }
