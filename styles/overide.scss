@@ -1,3 +1,9 @@
+@use "styles/breakpoints";
+
+.fp-overflow {
+  overflow: hidden!important;
+}
+
 //Dot nav
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background-color: var(--text)!important;
@@ -5,4 +11,71 @@
 
 #fp-nav ul li, .fp-slidesNav ul li {
   height: 20px!important;
+}
+
+#fp-nav ul li .fp-tooltip {
+  top: 0!important;
+}
+
+#fp-nav ul li a.active span {
+  height: 15px!important;
+  width: 15px!important;
+  margin: -7.5px 0 0 -7.5px!important;
+}
+
+
+//Arrow nav
+$arrow-height: 9em;
+
+.fp-prev {
+  left: 6rem!important;
+
+  @include breakpoints.width(md) {
+    left: 4rem!important;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-30%, -50%) rotate(-45deg);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+  }
+}
+
+.fp-next {
+  right: 6rem!important;
+
+  @include breakpoints.width(md) {
+    right: 4rem!important;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-70%, -50%) rotate(135deg);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+  }
+}
+
+.fp-arrow {
+  border: none!important;
+  width: 3.5em!important;
+  height: 9em!important;
+  background: rgba(70, 70, 70, 0.8);
+  mix-blend-mode: luminosity;
+  border-radius: 5px;
+}
+
+
+.fp-controlArrow {
+  top: 50%!important;
+  margin-top: -$arrow-height/2!important;
 }
