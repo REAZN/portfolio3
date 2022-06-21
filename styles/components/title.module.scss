@@ -1,0 +1,25 @@
+@use "styles/breakpoints";
+
+.title {
+  //margin: auto;
+  max-width: 90rem;
+  font-family: var(--font-title);
+  color: var(--text);
+  font-size: 4rem;
+
+  @include breakpoints.width(md) {
+    font-size: 2rem;
+  }
+
+    &::after {
+    content: "";
+    width: 8rem;
+    height: 3px;
+    background-color: var(--text);
+    display: block;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
