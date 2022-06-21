@@ -1,11 +1,14 @@
 import styles from "styles/components/sections/about.module.scss";
 // import { motion, AnimatePresence } from "framer-motion";
-import { Title, Button, Sphere, GitHub, Twitter, LinkedIn, CodePen, LinkIcon } from "components";
+import { Title, Button, Sphere, GitHub, Twitter, LinkedIn, CodePen, LinkIcon, Signature } from "components";
 import config from "config";
 
 export default function About() {
     return (
         <section className={styles.about}>
+            <div className={styles.background}>
+                <Signature/>
+            </div>
             <div className={styles.aboutContainer}>
                 <div className={styles.content}>
                     <div className={styles.info}>

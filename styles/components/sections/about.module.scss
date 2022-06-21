@@ -12,6 +12,19 @@
   align-items: center;
   justify-content: center;
 
+  .background {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 2%;
+
+    path {
+      fill: var(--text);
+    }
+  }
+
   .aboutContainer {
     //position: absolute;
     //top: 0; bottom: 0;
@@ -27,6 +40,7 @@
       align-items: center;
       gap: 5em;
       max-width: 90em;
+      position: relative;
 
       @include breakpoints.width(lg) {
         flex-direction: column;
