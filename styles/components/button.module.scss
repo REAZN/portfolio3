@@ -1,0 +1,10 @@
+.button {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background: rgba(70, 70, 70, 0.8);
+  mix-blend-mode: luminosity;
+  color: var(--text);
+  user-select: none;
+}
