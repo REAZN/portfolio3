@@ -1,5 +1,5 @@
 import styles from "styles/components/sections/projects.module.scss";
-import { Title, Button } from "components";
+import {Title, Button, LinkIcon} from "components";
 
 export default function Projects({index, title = "Project", description, technologies, image, demo, github, background}) {
     return (
@@ -19,7 +19,10 @@ export default function Projects({index, title = "Project", description, technol
                             ))}
                         </div>
                         <div className={styles.links}>
-                            <Button href={demo}>Demo</Button>
+                            <Button href={demo}>
+                                Demo
+                                <LinkIcon fill={"white"}/>
+                            </Button>
                             <a href={github} className={styles.github}>GitHub</a>
                         </div>
                     </div>

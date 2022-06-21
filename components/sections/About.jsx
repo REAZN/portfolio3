@@ -1,6 +1,6 @@
 import styles from "styles/components/sections/about.module.scss";
 // import { motion, AnimatePresence } from "framer-motion";
-import { Title, Button, Sphere, GitHub, Twitter, LinkedIn, CodePen } from "components";
+import { Title, Button, Sphere, GitHub, Twitter, LinkedIn, CodePen, LinkIcon } from "components";
 import config from "config";
 
 export default function About() {
@@ -17,7 +17,10 @@ export default function About() {
                             <li><a href={`https://linkedin.com/in/${config.social.linkedin}`} target="_blank" rel="noreferrer"><LinkedIn fill="var(--text)"/></a></li>
                             <li><a href={`https://twitter.com/${config.social.twitter}`} target="_blank" rel="noreferrer"><Twitter fill="var(--text)"/></a></li>
                         </ul>
-                        <Button href={"/cv"}>Curriculum Vitae</Button>
+                        <Button href={"/cv"}>
+                            Curriculum Vitae
+                            <LinkIcon fill={"white"}/>
+                        </Button>
                     </div>
                     <div className={styles.sphere}>
                         <Sphere style={{ width: "100%", height: "100%" }}/>

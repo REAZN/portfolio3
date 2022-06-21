@@ -7,4 +7,7 @@
   mix-blend-mode: luminosity;
   color: var(--text);
   user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
