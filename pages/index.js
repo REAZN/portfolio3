@@ -1,9 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
-import {Nav, About, Projects} from "components";
-import Head from 'next/head'
-import { motion, AnimatePresence } from "framer-motion";
+import {Nav, Home, About, Projects, Experiments} from "components";
 
 import config from "config";
 
@@ -12,7 +9,7 @@ export default function Index() {
     const pages = ["Home", "About", "Projects", "Experiments"];
 
     return (
-        <div className="App">
+        <>
             <Nav pages={pages}/>
             <ReactFullpage
                 navigation
@@ -20,13 +17,13 @@ export default function Index() {
                 // slideNavigation={true}
                 // sectionsColor={["#282c34", "#ff5f45", "#0798ec"]}
                 anchors={pages}
-                licenceKey={"gplv3-license"}
+                licenseKey={"gplv3-license"}
 
                 render={comp =>
                     console.log("render prop change") || (
                         <ReactFullpage.Wrapper>
                             <div className="section">
-                                Home
+                                <Home/>
                             </div>
                             <div className="section">
                                 <About/>
@@ -48,12 +45,12 @@ export default function Index() {
                                 ))}
                             </div>
                             <div className="section">
-                                <h3>Experiments</h3>
+                                <Experiments />
                             </div>
                         </ReactFullpage.Wrapper>
                     )
                 }
             />
-        </div>
+        </>
     );
 };

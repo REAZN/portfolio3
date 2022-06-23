@@ -6,8 +6,10 @@ export { default as Button } from "./Button";
 export { default as Sphere } from "./Sphere";
 
 //Sections
+export { default as Home } from "./sections/Home";
 export { default as About } from "./sections/About";
 export { default as Projects } from "./sections/Projects";
+export { default as Experiments } from "./sections/Experiments";
 
 //Icons
 export { default as LinkIcon } from "./icons/Link";
