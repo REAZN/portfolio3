@@ -1,4 +1,4 @@
-import styles from "styles/components/sections/projects.module.scss";
+import styles from "styles/sections/projects.module.scss";
 import {Title, Button, LinkIcon} from "components";
 
 export default function Projects({index, title = "Project", description, technologies, image, demo, github, background}) {

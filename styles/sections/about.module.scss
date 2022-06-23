@@ -1,4 +1,4 @@
-@use "../../breakpoints";
+@use "../breakpoints";
 
 .about {
   width: 100%;
@@ -18,7 +18,11 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-    opacity: 2%;
+    opacity: 5%;
+
+    @include breakpoints.width(lg) {
+      display: none;
+    }
 
     path {
       fill: var(--text);

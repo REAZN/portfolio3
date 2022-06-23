@@ -1,4 +1,4 @@
-@use "../../breakpoints";
+@use "../breakpoints";
 
 .projects {
   width: 100%;
@@ -20,24 +20,11 @@
     background: rgba(88, 72, 185, 0.3);
     mix-blend-mode: luminosity;
     filter: blur(169px);
+    z-index: 0;
   }
 
   .projectContainer {
-    //position: absolute;
-    //top: 0; bottom: 0;
-    //height: 50%;
-    //margin: auto;
-    //width: calc(100% - ((var(--padding) + 5em) * 2));
-
-    //position: relative;
-    //top: 20%;
-    //transform: translateY(-50%);
-
-
-
-      //@include breakpoints.width(lg) {
-      //  top: 50%;
-      //}
+    position: relative;
 
     .project {
       padding-top: 5rem;
@@ -47,6 +34,7 @@
       align-items: center;
       gap: 5em;
       max-width: 90em;
+      z-index: 1;
 
       @include breakpoints.width(lg) {
         flex-direction: column-reverse;

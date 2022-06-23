@@ -1,4 +1,4 @@
-import styles from "styles/components/sections/about.module.scss";
+import styles from "styles/sections/about.module.scss";
 // import { motion, AnimatePresence } from "framer-motion";
 import { Title, Button, Sphere, GitHub, Twitter, LinkedIn, CodePen, LinkIcon, Signature } from "components";
 import config from "config";
