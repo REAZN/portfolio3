@@ -1,0 +1,133 @@
+@use "../breakpoints";
+
+.experiments {
+  width: 100%;
+  height: 100%;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+  background: #000F22;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .blur {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: rgba(88, 72, 185, 0.3);
+    //mix-blend-mode: luminosity;
+    filter: blur(169px);
+    z-index: 0;
+  }
+
+  .experimentContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10em;
+
+    .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      justify-content: flex-end;
+      align-items: center;
+
+      p {
+        max-width: 50%;
+        text-align: center;
+      }
+    }
+
+    .cards {
+      flex: 1;
+      list-style: none;
+      display: flex;
+
+      $width: 500px;
+
+      .card {
+        aspect-ratio: 5 / 3;
+        //min-width: 500px;
+        width: $width;
+        position: relative;
+        height: fit-content;
+        transition: transform 200ms ease-in-out;
+
+        @include breakpoints.width(lg) {
+          //min-width: 300px;
+          //width: 300px;
+
+          //.image {
+          //  width: 300px;
+          //  min-width: 300px;
+          //}
+        }
+
+        &:not(:first-child) {
+          //margin-left: -20em;
+          margin-left: -$width/1.5;
+
+        }
+
+        &:hover ~ .card, &:focus-within ~ .card {
+          transform: translateX(15em);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+
+          .image {
+            filter: grayscale(0) invert(0); //change
+          }
+        }
+
+        .image {
+          //min-width: 300px;
+          width: px;
+          aspect-ratio: 5 / 3;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          filter: grayscale(0%) invert(10%);
+          border-radius: 5px;
+          //mix-blend-mode: luminosity; //Maybe
+
+          img {
+            flex-shrink: 0;
+            min-height: 100%;
+            min-width: 100%;
+          }
+        }
+
+        .text {
+          text-transform: uppercase;
+          position: absolute;
+          left: 1rem;
+          bottom: 1rem;
+          display: flex;
+          flex-direction: column;
+
+          .number {
+            font-size: 0.9em;
+            font-family: var(--font-mono);
+          }
+
+          .title {
+            //font-size: clamp(2.2em, 0vw, 1.2em); //? make this work
+            font-weight: 700;
+            transition: all 0.2s;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}
