@@ -5,7 +5,7 @@ import config from "config";
 export default function Experiments() {
     return (
         <section className={styles.experiments}>
-            <div className={styles.blur} style={{top: "200px", right: "-300px", backgroundColor: "rgba(203, 77, 153, 0.2)"}}/>
+            <div className={styles.blur} style={{bottom: "250px", right: "-300px", backgroundColor: "rgba(203, 77, 153, 0.2)"}}/>
             <div className={styles.blur} style={{top: "-100px", left: "-300px"}}/>
             <div className={styles.experimentContainer}>
                 <div className={styles.info}>

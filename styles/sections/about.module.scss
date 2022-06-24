@@ -30,13 +30,6 @@
   }
 
   .aboutContainer {
-    //position: absolute;
-    //top: 0; bottom: 0;
-    //height: 50%;
-    //width: calc(100% - var(--padding) * 2);
-    //margin: auto;
-    //top: 50%;
-    //transform: translateY(-50%);
 
     .content {
       display: flex;
@@ -70,6 +63,14 @@
           display: flex;
           list-style: none;
           gap: 2em;
+
+          li {
+            transition: transform 100ms ease-in-out;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
         }
       }
 

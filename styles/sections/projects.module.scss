@@ -34,7 +34,6 @@
       align-items: center;
       gap: 5em;
       max-width: 90em;
-      z-index: 1;
 
       @include breakpoints.width(lg) {
         flex-direction: column-reverse;
