@@ -18,7 +18,6 @@
     height: 700px;
     border-radius: 50%;
     background: rgba(88, 72, 185, 0.3);
-    //mix-blend-mode: luminosity;
     filter: blur(169px);
     z-index: 0;
   }
@@ -30,6 +29,10 @@
     align-items: center;
     gap: 10em;
 
+    @include breakpoints.width(md) {
+      gap: 0;
+    }
+
     .info {
       flex: 1;
       display: flex;
@@ -39,57 +42,68 @@
       align-items: center;
 
       p {
-        max-width: 50%;
+        max-width: 70%;
         text-align: center;
       }
+    }
+
+
+    --card-width: 500px;
+
+    @include breakpoints.width(lg) {
+      --card-width: 350px;
     }
 
     .cards {
       flex: 1;
       list-style: none;
       display: flex;
+      align-items: center;
 
-      $width: 500px;
+      @include breakpoints.width(md) {
+        flex-direction: column-reverse;
+        flex-basis: 300px;
+      }
 
       .card {
         aspect-ratio: 5 / 3;
-        //min-width: 500px;
-        width: $width;
+        width: var(--card-width);
         position: relative;
         height: fit-content;
         transition: transform 200ms ease-in-out;
 
-        @include breakpoints.width(lg) {
-          //min-width: 300px;
-          //width: 300px;
-
-          //.image {
-          //  width: 300px;
-          //  min-width: 300px;
-          //}
-        }
-
+        //Desktop
         &:not(:first-child) {
-          //margin-left: -20em;
-          margin-left: -$width/1.5;
-
+          margin-left: calc(var(--card-width)/1.5*-1);
         }
 
         &:hover ~ .card, &:focus-within ~ .card {
-          transform: translateX(15em);
+          transform: translateX(calc(var(--card-width) / 2));
+        }
+
+        //Mobile
+        @include breakpoints.width(md) {
+          margin-left: 0!important;
+
+          &:not(:first-child) {
+            margin-bottom: calc(var(--card-width)/1.5*-1);
+          }
+
+          &:hover ~ .card, &:focus-within ~ .card {
+            transform: translateY(calc(var(--card-width) / 1.9));
+          }
         }
 
         &:hover {
           transform: scale(1.1);
 
           .image {
-            filter: grayscale(0) invert(0); //change
+            filter: grayscale(0) invert(0);
           }
         }
 
         .image {
-          //min-width: 300px;
-          width: px;
+          width: var(--card-width);
           aspect-ratio: 5 / 3;
           position: relative;
           display: flex;
@@ -98,10 +112,8 @@
           overflow: hidden;
           filter: grayscale(0%) invert(10%);
           border-radius: 5px;
-          //mix-blend-mode: luminosity; //Maybe
 
           img {
-            flex-shrink: 0;
             min-height: 100%;
             min-width: 100%;
           }
@@ -121,7 +133,6 @@
           }
 
           .title {
-            //font-size: clamp(2.2em, 0vw, 1.2em); //? make this work
             font-weight: 700;
             transition: all 0.2s;
             line-height: 1;
