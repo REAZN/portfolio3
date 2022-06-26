@@ -25,9 +25,9 @@ export default function Experiments() {
                                     <img src={`/images/codepen/${experiment.image}`} alt={experiment.title}/>
                                 </div>
                                 <div className={styles.text}>
-                                <span className={styles.number}>
-                                    experiment 0{(index + 1)}
-                                </span>
+                                    <span className={styles.number}>
+                                        experiment 0{(index + 1)}
+                                    </span>
                                     <span className={styles.title}>{experiment.title}</span>
                                 </div>
                             </a>
