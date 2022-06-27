@@ -1,4 +1,4 @@
-import styles from "/styles/sections/home.module.scss";
+import styles from "/styles/sections/Home.module.scss";
 import {useEffect} from "react";
 
 export default function Home() {

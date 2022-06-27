@@ -1,4 +1,4 @@
-import styles from "styles/sections/experiments.module.scss"
+import styles from "styles/sections/Experiments.module.scss"
 import {Button, LinkIcon, Title} from "components";
 import config from "config";
 

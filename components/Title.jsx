@@ -1,4 +1,4 @@
-import styles from "styles/components/title.module.scss";
+import styles from "styles/components/Title.module.scss";
 
 
 export default function Title({title = "Title", center = false}) {
