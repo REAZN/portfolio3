@@ -27,6 +27,7 @@ export default function Projects({index, title = "Project", description, technol
                         </div>
                     </div>
                     <div className={styles.image}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={`/images/projects/${image}`} alt={"Project graphic"}/>
                     </div>
                 </div>

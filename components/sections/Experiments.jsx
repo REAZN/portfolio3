@@ -22,6 +22,7 @@ export default function Experiments() {
                         <li key={experiment.title} className={styles.card} >
                             <a href={experiment.url} target="_blank" rel="noreferrer">
                                 <div className={styles.image}>
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img src={`/images/codepen/${experiment.image}`} alt={experiment.title}/>
                                 </div>
                                 <div className={styles.text}>
