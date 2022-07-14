@@ -1,6 +1,6 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import {Nav, Home, About, Projects, Experiments} from "components";
+import {Nav, Meta, Home, About, Projects, Experiments} from "components";
 
 import config from "config";
 
@@ -10,6 +10,7 @@ export default function Index() {
 
     return (
         <>
+            <Meta/>
             <Nav pages={pages}/>
             <ReactFullpage
                 navigation

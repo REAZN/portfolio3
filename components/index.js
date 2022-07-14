@@ -1,4 +1,5 @@
 export { default as Nav } from "./Nav";
+export { default as Meta } from "./Meta";
 
 //Components
 export { default as Title } from "./Title";

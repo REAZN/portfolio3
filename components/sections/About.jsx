@@ -13,7 +13,7 @@ export default function About() {
                 <div className={styles.content}>
                     <div className={styles.info}>
                         <Title title={"About."}/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A expedita quia quibusdam saepe suscipit! Accusantium amet aperiam, asperiores, dolorum facilis iure officia quis repellat sequi sit tempora unde. Et, voluptates.</p>
+                        <p>{config.about}</p>
                         <ul className={styles.social}>
                             <li><a href={`https://github.com/${config.social.github}`} target="_blank" rel="noreferrer"><GitHub fill="var(--text)"/></a></li>
                             <li><a href={`https://codepen.io/${config.social.codepen}`} target="_blank" rel="noreferrer"><CodePen fill="var(--text)"/></a></li>
