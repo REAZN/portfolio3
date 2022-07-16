@@ -119,13 +119,14 @@
           }
         }
 
-        .text { //TODO - fix contrast issue
+        .text {
           text-transform: uppercase;
           position: absolute;
           left: 1rem;
           bottom: 1rem;
           display: flex;
           flex-direction: column;
+          text-shadow: 0 0 10px #000;
 
           .number {
             font-size: 0.9em;
